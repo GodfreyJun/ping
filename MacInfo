@@ -1,0 +1,29 @@
+
+
+不知怎么忘记mac os系统的root密码了
+
+方法一：
+
+首先，启动机器，启动时按住Apple和S键，以单用户模式（single user mode）进入系统。输入：mount -uw / 然后回车。
+输入: passwd 短用户名 （如果你知道的话）如果你不知道短用户名，可以输入: passwd root
+
+输入两遍新密码。
+
+输入：reboot 回车。
+
+让机器重新启动。
+
+如果你用的是root，登录以后，要到系统预置/系统偏好设置(System Preferences)里的”账户”下，找到适当的用户，并修改其密码。
+
+
+方法二：
+
+能登陆系统，但是忘记了root密码，修改root密码如下:
+
+sudo bash
+password:输入你的当前用户密码
+bash-3.2# ok done!
+其实没啥，因为登陆当前用户默认在系统sudoers的list里。
+password root
+
+输入新的密码
